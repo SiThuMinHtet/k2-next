@@ -1,0 +1,273 @@
+@import "./variables";
+
+.content {
+  &__title {
+    padding-left: 2rem;
+  }
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+  background-color: rgb(252, 252, 252);
+  padding: 2rem;
+}
+
+.statCard {
+  @include card;
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+
+  &__icon {
+    @include flex-center();
+    @include card-icon();
+    color: white;
+  }
+
+  &__content {
+    display: flex;
+    text-align: end;
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__value {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+
+  &__label {
+    font-size: 0.875rem;
+    color: #666;
+  }
+
+  &__time {
+    @include update-time();
+  }
+}
+
+.chartsGrid {
+  padding-right: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.chartCard {
+  @include card;
+
+  &__title {
+    margin-bottom: 1rem;
+    font-size: 1.125rem;
+  }
+
+  &__content {
+    height: 200px;
+    width: 95%;
+  }
+}
+
+.socialGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  height: 200px;
+  background-image: url("/img/Picture1.png");
+  background-size: cover;
+  align-items: center;
+  padding: 1rem 1rem;
+}
+
+.socialCard {
+  @include card;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  height: 130px;
+
+  &__icon {
+    @include card-icon();
+    @include flex-center();
+    color: white;
+  }
+
+  &__content {
+    display: flex;
+    text-align: end;
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__value {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+
+  &__time {
+    @include update-time();
+  }
+}
+
+.usageGrid {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.usageCard {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  @include card();
+  position: relative;
+  height: 400px;
+
+  &__icon {
+    @include card-icon();
+    @include flex-center();
+  }
+
+  h2 {
+    margin-left: 5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__content {
+    padding: 20px;
+  }
+
+  &.device .usageCard__content {
+    display: flex;
+    gap: 2rem;
+  }
+}
+
+.iconGlobe {
+  background-color: #4caf50;
+}
+
+.iconChart {
+  background-color: #f44336;
+}
+
+.browserList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.browserItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+  gap: 20px;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.browserDot {
+  background-color: red;
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+}
+
+.browserName {
+  color: #333;
+  flex: 1;
+}
+
+.browserNumber {
+  color: #666;
+  margin-right: 20px;
+}
+
+.browserPercentage {
+  color: #999;
+  min-width: 60px;
+  text-align: right;
+}
+
+.deviceLegend {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.colorDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+
+  &.pc {
+    background-color: #00bcd4;
+  }
+  &.laptop {
+    background-color: #f44336;
+  }
+  &.tablet {
+    background-color: #ffc107;
+  }
+  &.mobile {
+    background-color: #2196f3;
+  }
+}
+
+#deviceChart {
+  width: 90px;
+  height: 90px;
+  margin: auto;
+}
+
+@media (max-width: 1499px) {
+  .statsGrid,
+  .chartsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .socialGrid {
+    height: auto;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1100px) {
+  .usageGrid {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .statsGrid,
+  .chartsGrid,
+  .socialGrid,
+  .usageGrid {
+    grid-template-columns: 1fr;
+  }
+}
+

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import SideBar from "@/components/SideBar";
 import Navbar from "@/components/Navbar";
+import Dashboard from "@/components/Dashboard";
 
 export default function Home() {
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
@@ -15,7 +16,7 @@ export default function Home() {
       <main>
         <Navbar onToggleSidebar={toggleSidebar} />
         <div className='content'>
-          <h1>hello</h1>
+          <Dashboard/>
         </div>
       </main>
     </div>
