@@ -1,0 +1,22 @@
+
+.inputGroup {
+    position: relative;
+    margin-bottom: 10px;
+  
+    i {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  
+    input {
+      width: 250px;
+      height: 30px;
+      padding: 5px 5px 5px 30px;
+      border: none;
+      border-bottom: 1px solid;
+      outline: none;
+      font-size: 14px;
+    }
+  }

@@ -1,0 +1,42 @@
+@import 'variables';
+
+.loginForm {
+  background-color: $bg-color;
+width: 350px;
+  height: 400px;
+  border-radius: 20px;
+  position: relative;
+
+  &Box {
+    @include flex-center;
+    flex-direction: column;
+    height: 40vh;
+    line-height: 4rem;
+
+    i {
+      color: $accent-color;
+    }
+  }
+}
+
+
+.mainLogo {
+  margin: 30px 0px 0px 10px;
+}
+
+.loginBtn {
+  width: 250px;
+  height: 35px;
+  border-radius: 5px;
+  background-color: $accent-color;
+  color: $text-color;
+  border: none;
+  margin: 15px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+

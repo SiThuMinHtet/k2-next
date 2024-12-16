@@ -1,5 +1,7 @@
 function Index() {
-  return <div>This is dashboard</div>;
-}
+
+
+  return <Login.Provider>
+    <
 
 export default Index;

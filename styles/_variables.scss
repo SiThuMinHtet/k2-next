@@ -1,0 +1,18 @@
+// Colors
+$background-color: #000000;
+$text-color: #ffffff;
+$primary-color: #0070c0;
+$secondary-color: #002d3d;
+$accent-color: #1f4e79;
+$bg-color: #ffffff;
+
+// Typography
+$font-family: "Roboto", serif;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
