@@ -1,6 +1,8 @@
-import Image from "next/image";
-import styles from "@/styles/LoginForm.module.scss";
-import InputField from "./InputField.js";
+
+import Image from 'next/image'
+import styles from '@/styles/LoginForm.module.scss'
+import InputField from './InputField.js'
+import Link from 'next/link';
 export default function LoginForm() {
   // const { login } = useLogin()
 

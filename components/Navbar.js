@@ -1,20 +1,18 @@
 import styles from "@/styles/Navbar.module.scss";
 
-export default function Navbar() {
+export default function Navbar({ onToggleSidebar }) {
   return (
     <header className={styles.header}>
-      {/* Sidebar Toggle */}
       <button
         className={styles.header__toggle}
         aria-label="Toggle Sidebar"
         id="sidebarToggle"
+        onClick={onToggleSidebar}
       >
         <span></span>
       </button>
 
-      {/* Header Items */}
       <div className={styles.header__items}>
-        {/* Notification Bell */}
         <div className={styles.notification}>
           <a href="#" className={styles.notification__bell}>
             <i className="fa-solid fa-bell"></i>
@@ -22,7 +20,6 @@ export default function Navbar() {
           </a>
         </div>
 
-        {/* User Profile */}
         <div className={styles.profile}>
           <div className={styles.profile__details}>
             <h3>Abbott Keitch</h3>
@@ -38,3 +35,4 @@ export default function Navbar() {
     </header>
   );
 }
+

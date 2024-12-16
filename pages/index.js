@@ -5,6 +5,8 @@ import styles from "@/styles/Home.module.scss";
 
 export default function Home() {
   return (
+
+   
     <MainLayout>
       <div className={styles.loginContainer}>
         <div className={styles.loginPage}>
@@ -20,5 +22,6 @@ export default function Home() {
         <LoginForm />
       </div>
     </MainLayout>
+    
   );
 }

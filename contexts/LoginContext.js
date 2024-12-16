@@ -1,13 +1,13 @@
-// import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
 
-// const LoginContext = createContext();
+const LoginContext = createContext();
 
-// export function LoginProvider({ children }) {
-//   const [isAuthenticated, setIsAuthenticated] = useState(false);
+export function LoginProvider({ children }) {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-//   return (
-//     <LoginContext.Provider value={{ isAuthenticated }}>
-//       {children}
-//     </LoginContext.Provider>
-//   );
-// }
+  return (
+    <LoginContext.Provider value={{ isAuthenticated }}>
+      {children}
+    </LoginContext.Provider>
+  );
+}

@@ -7,9 +7,35 @@ $submenu-bg: #1e374d;
 .sidebar {
   background-color: $primary-color;
   color: $text-color;
-  width: 220px;
+  width: 200px;
   height: 100vh;
   padding: 1rem;
+  transition: width 0.3s ease;
+
+  &.collapsed {
+    width: 60px;
+
+    .sidebar__logo {
+      justify-content: center;
+
+      h5 {
+        display: none;
+      }
+    }
+
+    .navlist__item {
+      text-align: center;
+      margin-left: 0;
+
+      .navlist__link {
+        justify-content: center;
+
+        span, .chevron {
+          display: none;
+        }
+      }
+    }
+  }
 
   &__logo {
     display: flex;
@@ -42,10 +68,9 @@ $submenu-bg: #1e374d;
 
       &__item {
         margin-bottom: 1rem;
+        margin-left: 1.5rem;
 
         &.active {
-          //   background-color: $secondary-color;
-
           .navlist__link {
             color: $active-color;
           }
@@ -107,3 +132,4 @@ $submenu-bg: #1e374d;
     }
   }
 }
+

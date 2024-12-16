@@ -1,7 +1,7 @@
 import "@/styles/globals.scss";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import "@/styles/globals.scss";
+import styles from '@/styles/globals.scss'
 
 config.autoAddCss = false;
 

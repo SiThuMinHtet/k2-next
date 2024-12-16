@@ -15,26 +15,8 @@ body {
   box-sizing: border-box;
 }
 
-.dashboard
-{
-  display:flex;
-}
-
 
 main{
   margin: 0;
   padding: 0;
-  background-color: white;
-  color: black;
-  flex-grow: 1;
-  transition: margin-left 0.3s ease;
-
-  .content
-  {
-    padding: 10px;
-  }
 }
-.sidebar.collapsed + main {
-  margin-left: 60px;
-}
-

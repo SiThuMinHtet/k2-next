@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "@/styles/Sidebar.module.scss";
 
-export default function SideBar() {
+export default function SideBar({ isCollapsed }) {
   const [activeSubMenu, setActiveSubMenu] = useState(null);
 
   const toggleSubMenu = (menu) => {
@@ -9,20 +9,22 @@ export default function SideBar() {
   };
 
   return (
-    <aside className={styles.sidebar}>
+    <aside className={`${styles.sidebar} ${isCollapsed ? styles.collapsed : ''}`}>
       <div className={styles.sidebar__logo}>
         <i className="fa-solid fa-k"></i>
-        <h5>
-          Kanko-Knari <br />
-          <span className={styles.adminText}>Admin Panel</span>
-        </h5>
+        {!isCollapsed && (
+          <h5>
+            Kanko-Knari <br />
+            <span className={styles.adminText}>Admin Panel</span>
+          </h5>
+        )}
       </div>
       <nav className={styles.sidebar__nav}>
         <ul className={styles.navlist}>
           <li className={styles.navlist__item}>
             <a href="#" className={styles.navlist__link}>
               <i className="fa-solid fa-table"></i>
-              <span>Dashboard</span>
+              {!isCollapsed && <span>Dashboard</span>}
             </a>
           </li>
           <li
@@ -35,14 +37,18 @@ export default function SideBar() {
               onClick={() => toggleSubMenu("company")}
             >
               <i className="fa-solid fa-building"></i>
-              <span>Company</span>
-              <i
-                className={`fa-solid fa-chevron-down ${styles.chevron} ${
-                  activeSubMenu === "company" ? styles.open : ""
-                }`}
-              ></i>
+              {!isCollapsed && (
+                <>
+                  <span>Company</span>
+                  <i
+                    className={`fa-solid fa-chevron-down ${styles.chevron} ${
+                      activeSubMenu === "company" ? styles.open : ""
+                    }`}
+                  ></i>
+                </>
+              )}
             </div>
-            {activeSubMenu === "company" && (
+            {activeSubMenu === "company" && !isCollapsed && (
               <ul className={styles.submenu}>
                 <li className={styles.submenu__item}>
                   <a href="#" className={styles.submenu__link}>
@@ -60,7 +66,7 @@ export default function SideBar() {
           <li className={styles.navlist__item}>
             <a href="#" className={styles.navlist__link}>
               <i className="fa-solid fa-credit-card"></i>
-              <span>Payment List</span>
+              {!isCollapsed && <span>Payment List</span>}
             </a>
           </li>
         </ul>
@@ -68,3 +74,4 @@ export default function SideBar() {
     </aside>
   );
 }
+
