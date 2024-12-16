@@ -1,0 +1,52 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 17px;
+  background-color: black;
+}
+.header__toggle {
+  width: 24px;
+  height: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  padding: 1.5rem;
+}
+.header__toggle span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: white;
+  position: relative;
+}
+.header__toggle span::before, .header__toggle span::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 2px;
+  background: white;
+  left: 0;
+}
+.header__toggle span::before {
+  top: -6px;
+}
+.header__toggle span::after {
+  bottom: -6px;
+}
+
+.header__username {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  gap: 30px;
+}
+.header__username:hover {
+  color: grey;
+}
+.header__username img {
+  height: 30px;
+  width: 30px;
+}/*# sourceMappingURL=Navbar.module.css.map */
