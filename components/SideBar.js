@@ -3,9 +3,24 @@ import styles from "@/styles/Sidebar.module.scss";
 
 export default function SideBar({ isCollapsed }) {
   const [activeSubMenu, setActiveSubMenu] = useState(null);
+  const [hoveredItem, setHoveredItem] = useState(null);
 
   const toggleSubMenu = (menu) => {
-    setActiveSubMenu(activeSubMenu === menu ? null : menu);
+    if (!isCollapsed) {
+      setActiveSubMenu(activeSubMenu === menu ? null : menu);
+    }
+  };
+
+  const handleMouseEnter = (menu) => {
+    if (isCollapsed) {
+      setHoveredItem(menu);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (isCollapsed) {
+      setHoveredItem(null);
+    }
   };
 
   return (
@@ -31,6 +46,8 @@ export default function SideBar({ isCollapsed }) {
             className={`${styles.navlist__item} ${
               activeSubMenu === "company" ? styles.active : ""
             }`}
+            onMouseEnter={() => handleMouseEnter("company")}
+            onMouseLeave={handleMouseLeave}
           >
             <div
               className={styles.navlist__link}
@@ -48,8 +65,12 @@ export default function SideBar({ isCollapsed }) {
                 </>
               )}
             </div>
-            {activeSubMenu === "company" && !isCollapsed && (
-              <ul className={styles.submenu}>
+            {((activeSubMenu === "company" && !isCollapsed) || 
+              (hoveredItem === "company" && isCollapsed)) && (
+              <ul className={`${styles.submenu} ${isCollapsed ? styles.floating : ''}`}>
+                {isCollapsed && (
+                  <li className={styles.submenu__header}>Company</li>
+                )}
                 <li className={styles.submenu__item}>
                   <a href="#" className={styles.submenu__link}>
                     User List
