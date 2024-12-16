@@ -1,0 +1,19 @@
+.inputGroup {
+  position: relative;
+  margin-bottom: 10px;
+}
+.inputGroup i {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.inputGroup input {
+  width: 250px;
+  height: 30px;
+  padding: 5px 5px 5px 30px;
+  border: none;
+  border-bottom: 1px solid;
+  outline: none;
+  font-size: 14px;
+}/*# sourceMappingURL=InputField.module.css.map */

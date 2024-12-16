@@ -1,0 +1,13 @@
+body {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: "Carlito";
+  font-style: normal;
+  font-weight: 100;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}/*# sourceMappingURL=globals.css.map */
