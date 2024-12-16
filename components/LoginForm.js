@@ -3,7 +3,7 @@ import Image from 'next/image'
 import styles from '@/styles/LoginForm.module.scss'
 import InputField from './InputField.js'
 export default function LoginForm() {
-  const { login } = useLogin()
+  // const { login } = useLogin()
 
   const handleSubmit = async (e) => {
     e.preventDefault()
