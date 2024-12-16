@@ -1,11 +1,9 @@
-import MainLayout from '@/components/MainLayout'
-import LoginForm from '@/components/LoginForm'
-import { LoginProvider } from '@/contexts/LoginContext'
-import styles from '@/styles/Home.module.scss'
+import MainLayout from "@/components/MainLayout";
+import LoginForm from "@/components/LoginForm";
+import { LoginProvider } from "@/contexts/LoginContext";
+import styles from "@/styles/Home.module.scss";
 
 export default function Home() {
-
-
   return (
     <LoginProvider>
       <MainLayout>
@@ -24,6 +22,5 @@ export default function Home() {
         </div>
       </MainLayout>
     </LoginProvider>
-  )
+  );
 }
-

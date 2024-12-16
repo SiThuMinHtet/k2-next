@@ -1,0 +1,40 @@
+.loginContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../public/images/login/loginBG.png");
+  background-size: center/cover;
+  background-repeat: no-repeat;
+}
+
+.loginPage {
+  width: 420px;
+  height: 370px;
+  background-color: #002d3d;
+}
+.loginPageFlex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35vh;
+}
+.loginPageText {
+  width: 280px;
+  color: #ffffff;
+}
+
+.chgColor {
+  color: #0070c0;
+}
+
+.box {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(0deg, #0070c0 0%, #002d3d 100%);
+  position: absolute;
+  z-index: 1;
+  margin-top: -390px;
+  margin-left: 160px;
+}/*# sourceMappingURL=Home.module.css.map */
