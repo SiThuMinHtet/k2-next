@@ -9,6 +9,33 @@ $border-radius : 5px;
 // Typography
 $font-family: "Roboto", serif;
 
+.--orange {
+  background: rgb(255, 164, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 164, 0, 1) 26%,
+    rgba(227, 205, 20, 1) 100%
+  );
+}
+.--green {
+  background-color: green;
+}
+.--pink {
+  background-color: pink;
+}
+.--blue {
+  background-color: blue;
+}
+
+.--facebook {
+  background-color: #0348bff0;
+}
+.--instagram {
+  background-color: rgb(231, 114, 71);
+}
+.--twitter {
+  background-color: #00cfe8;
+}
 // Mixins
 @mixin flex-center {
   display: flex;

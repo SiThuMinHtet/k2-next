@@ -238,12 +238,16 @@
   }
 }
 
-#deviceChart {
-  width: 90px;
-  height: 90px;
-  margin: auto;
+.chartContainer {
+  width: 220px;
+  height: auto;
+  margin: 0 auto;
 }
 
+#deviceChart {
+  width: 100%;
+  height: auto;
+}
 @media (max-width: 1499px) {
   .statsGrid,
   .chartsGrid {

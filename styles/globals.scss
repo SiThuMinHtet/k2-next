@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Carlito:wght@100;400;700&display=swap');
 
-
 body {
   background-color: #000000;
   color: #ffffff;
@@ -15,13 +14,11 @@ body {
   box-sizing: border-box;
 }
 
-.dashboard
-{
-  display:flex;
+.dashboard {
+  display: flex;
 }
 
-
-main{
+main {
   width: 90%;
   margin: 0;
   padding: 0;
@@ -30,12 +27,19 @@ main{
   flex-grow: 1;
   transition: margin-left 0.3s ease;
 
-  .content
-  {
+  .content {
     padding: 10px;
+    height: auto;
   }
 }
+
 .sidebar.collapsed + main {
   margin-left: 60px;
 }
 
+/* Media query for big screens */
+@media (min-width: 1023px) {
+  main .content {
+    height: 100vh;
+  }
+}

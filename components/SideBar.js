@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "@/styles/Sidebar.module.scss";
-
+import Link from "next/link"
 export default function SideBar({ isCollapsed }) {
   const [activeSubMenu, setActiveSubMenu] = useState(null);
   const [hoveredItem, setHoveredItem] = useState(null);
@@ -37,10 +37,13 @@ export default function SideBar({ isCollapsed }) {
       <nav className={styles.sidebar__nav}>
         <ul className={styles.navlist}>
           <li className={styles.navlist__item}>
-            <a href="#" className={styles.navlist__link}>
-              <i className="fa-solid fa-table"></i>
+          <Link href="/dashboard/company/companylist" className={styles.navlist__link}>
+            <i className="fa-solid fa-table"></i>
               {!isCollapsed && <span>Dashboard</span>}
-            </a>
+                  </Link>
+
+
+            
           </li>
           <li
             className={`${styles.navlist__item} ${
@@ -71,10 +74,17 @@ export default function SideBar({ isCollapsed }) {
                 {isCollapsed && (
                   <li className={styles.submenu__header}>Company</li>
                 )}
+
+
+              <li className={styles.submenu__item}>
+                  <Link href="/dashboard/company/companylist" className={styles.submenu__link}>
+                    Company List
+                  </Link>
+                </li>
                 <li className={styles.submenu__item}>
-                  <a href="#" className={styles.submenu__link}>
+                <Link href="/dashboard/company/user" className={styles.submenu__link}>
                     User List
-                  </a>
+                  </Link>
                 </li>
                 <li className={styles.submenu__item}>
                   <a href="#" className={styles.submenu__link}>

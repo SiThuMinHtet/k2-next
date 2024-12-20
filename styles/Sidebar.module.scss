@@ -7,11 +7,12 @@ $floating-menu-bg: #ffffff;
 $floating-menu-text: #333333;
 $floating-menu-border: #e0e0e0;
 
+
 .sidebar {
   background-color: $primary-color;
   color: $text-color;
   width: 200px;
-  height: 100vh;
+  height: auto;
   padding: 1rem;
   transition: width 0.3s ease;
   position: relative;
@@ -21,7 +22,7 @@ $floating-menu-border: #e0e0e0;
     width: 60px;
 
     .sidebar__logo {
-      justify-content: center;
+      left: 1.5%;
 
       h5 {
         display: none;
@@ -44,11 +45,13 @@ $floating-menu-border: #e0e0e0;
   }
 
   &__logo {
+    position: fixed;
     display: flex;
     justify-content: center;
     gap: 1rem;
     text-align: center;
-    margin-bottom: 2rem;
+    left: 2%;
+    // margin-bottom: 2rem;
 
     i {
       font-size: 1.5rem;
@@ -68,6 +71,8 @@ $floating-menu-border: #e0e0e0;
   }
 
   &__nav {
+    position: fixed;
+    top: 10%;
     .navlist {
       list-style: none;
       padding: 0;

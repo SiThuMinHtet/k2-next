@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import SideBar from "@/components/SideBar";
 import Navbar from "@/components/Navbar";
-import UserList from "@/components/UserList";
+import CompanyList from "@/components/CompanyList";
 
 export default function Home() {
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
@@ -19,7 +19,7 @@ export default function Home() {
         <div className='content'>
          
 
-      <UserList></UserList>
+      <CompanyList></CompanyList>
 
         </div>
       </main>

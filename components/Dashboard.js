@@ -118,7 +118,7 @@ export default function Dashboard() {
       },
       options: {
         responsive: true,
-        maintainAspectRatio: false, 
+       
         plugins: {
           legend: { display: false },
           tooltip: {
@@ -148,10 +148,10 @@ export default function Dashboard() {
         <h1 className={styles.content__title}>ダッシュボード</h1>
 
         <div className={styles.statsGrid}>
-          <StatCard icon="fa-regular fa-copy" color="orange" label="Sales" value={`${initialData.totalSales.toLocaleString()}円`} />
-          <StatCard icon="fa-solid fa-shop" color="green" label="Visits" value={initialData.totalVisits.toLocaleString()} />
-          <StatCard icon="fa-solid fa-chart-simple" color="pink" label="Registered" value={initialData.registeredUsers} />
-          <StatCard icon="fa-solid fa-chart-line" color="blue" label="Followers" value={`+${initialData.newFollowers}`} />
+          <StatCard icon="far fa-copy" color="orange" label="Sales" value={`${initialData.totalSales.toLocaleString()}円`} />
+          <StatCard icon="fas fa-shop" color="green" label="Visits" value={initialData.totalVisits.toLocaleString()} />
+          <StatCard icon="fas fa-chart-simple" color="pink" label="Registered" value={initialData.registeredUsers} />
+          <StatCard icon="fas fa-chart-line" color="blue" label="Followers" value={`+${initialData.newFollowers}`} />
         </div>
 
         <div className={styles.chartsGrid}>
@@ -161,7 +161,7 @@ export default function Dashboard() {
         </div>
 
         <div className={styles.socialGrid}>
-          <SocialCard icon="fa-brands fa-facebook-f" color="facebook" label="Followers" value={`+${initialData.socialFollowers.facebook}`} />
+          <SocialCard icon="fab fa-facebook-f" color="facebook" label="Followers" value={`+${initialData.socialFollowers.facebook}`} />
           <SocialCard icon="fa-brands fa-instagram" color="instagram" label="Followers" value={`+${initialData.socialFollowers.instagram}`} />
           <SocialCard icon="fa-brands fa-twitter" color="twitter" label="Followers" value={`+${initialData.socialFollowers.twitter}`} />
         </div>
@@ -259,7 +259,9 @@ function DeviceUsageCard({ devices }) {
             </div>
           ))}
         </div>
-        <canvas id="deviceChart" width={20}></canvas>
+        <div className={styles.chartContainer}>
+          <canvas id="deviceChart" width={"200"}></canvas>
+        </div>
       </div>
     </div>
   );
