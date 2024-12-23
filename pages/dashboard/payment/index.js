@@ -1,7 +1,7 @@
 import { useState } from "react";
 import SideBar from "@/components/SideBar";
 import Navbar from "@/components/Navbar";
-import ActivityTable from "@/components/ActivityList";
+import PaymentList from "@/components/Payment";
 
 export default function Home() {
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
@@ -16,7 +16,7 @@ export default function Home() {
       <main>
         <Navbar onToggleSidebar={toggleSidebar} />
         <div className="content">
-          <ActivityTable />
+          <PaymentList />
         </div>
       </main>
     </div>
