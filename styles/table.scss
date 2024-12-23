@@ -71,6 +71,12 @@ $transition-duration: 0.2s;
         border-bottom-color: #b0bac6;
       }
     }
+
+    button
+    {
+      border: none;
+      background-color: white;
+    }
   }
 
   .icon-button {

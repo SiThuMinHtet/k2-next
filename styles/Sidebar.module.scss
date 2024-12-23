@@ -8,18 +8,33 @@ $floating-menu-text: #333333;
 $floating-menu-border: #e0e0e0;
 
 
+@mixin mobile {
+  @media (max-width: 630px) {
+    @content;
+  }
+}
+
 .sidebar {
   background-color: $primary-color;
   color: $text-color;
-  width: 200px;
+  min-width: 200px;
   height: auto;
   padding: 1rem;
   transition: width 0.3s ease;
   position: relative;
   z-index: 1000;
+  @include mobile {
+   font-size: small;
+   max-width: 200px;
+  //  margin-right: 20px;
+  }
+  
 
   &.collapsed {
-    width: 60px;
+    min-width: 60px;
+
+
+   
 
     .sidebar__logo {
       left: 1.5%;
@@ -82,6 +97,9 @@ $floating-menu-border: #e0e0e0;
         margin-bottom: 1rem;
         margin-left: 1.5rem;
         position: relative;
+        @include mobile {
+          margin-left: 0px;
+        }
 
         &.active {
           .navlist__link {
@@ -111,7 +129,9 @@ $floating-menu-border: #e0e0e0;
         .submenu {
           padding-left: 3rem;
           list-style: none;
-          margin: 0;
+          margin: 0; @include mobile {
+            padding-left: 2rem;
+          }
 
           &.floating {
             position: absolute;
@@ -184,4 +204,3 @@ $floating-menu-border: #e0e0e0;
     }
   }
 }
-

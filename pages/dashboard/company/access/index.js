@@ -15,8 +15,11 @@ export default function Home() {
       <SideBar isCollapsed={isSidebarCollapsed} />
       <main>
         <Navbar onToggleSidebar={toggleSidebar} />
-        <div className="content">
-          <ActivityTable />
+        <div className='content'>
+         
+    <ActivityTable/>
+     
+
         </div>
       </main>
     </div>

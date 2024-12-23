@@ -260,7 +260,7 @@ function DeviceUsageCard({ devices }) {
           ))}
         </div>
         <div className={styles.chartContainer}>
-          <canvas id="deviceChart" width={"200"}></canvas>
+          <canvas id="deviceChart" width={"150"}></canvas>
         </div>
       </div>
     </div>

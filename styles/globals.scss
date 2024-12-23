@@ -26,6 +26,7 @@ main {
   color: black;
   flex-grow: 1;
   transition: margin-left 0.3s ease;
+  z-index: 1;
 
   .content {
     padding: 10px;
@@ -38,8 +39,21 @@ main {
 }
 
 /* Media query for big screens */
-@media (min-width: 1023px) {
-  main .content {
-    height: 100vh;
+
+
+@media (max-width: 620px) {
+
+  main {
+    width: 80%;
+  
+   
   }
+
+}
+@media (min-width: 1023px) {
+
+  main .content {
+    height: auto;
+  }
+
 }
