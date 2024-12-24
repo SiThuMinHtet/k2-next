@@ -1,6 +1,12 @@
-import React from 'react';
+import React from "react";
+import { useRouter } from "next/router";
 
-const TableLayout = ({ children, title, total, onSearch, onPrint, onAdd }) => {
+const TableLayout = ({ children, title, total, onSearch, onPrint }) => {
+  const router = useRouter();
+  const handleAddButtonClick = () => {
+    router.push("/dashboard/company/companylist/companyRegister"); // Navigate to the specified route
+  };
+
   return (
     <div className="table-wrapper">
       <div className="table-header">
@@ -30,17 +36,17 @@ const TableLayout = ({ children, title, total, onSearch, onPrint, onAdd }) => {
           <button className="icon-button print-button" onClick={onPrint}>
             <i className="fa-solid fa-print"></i>
           </button>
-          <button className="icon-button add-button" onClick={onAdd}>
+          <button
+            className="icon-button add-button"
+            onClick={handleAddButtonClick}
+          >
             <i className="fa-solid fa-plus"></i>
           </button>
         </div>
       </div>
-      <div className="table-container">
-        {children}
-      </div>
+      <div className="table-container">{children}</div>
     </div>
   );
 };
 
 export default TableLayout;
-

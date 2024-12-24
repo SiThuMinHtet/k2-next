@@ -1,22 +1,184 @@
+.tab_btn {
+  display: flex;
+  justify-content: center;
 
-.inputGroup {
-    position: relative;
-    margin-bottom: 10px;
-  
-    i {
-      position: absolute;
-      left: 10px;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-  
-    input {
-      width: 250px;
-      height: 30px;
-      padding: 5px 5px 5px 30px;
-      border: none;
-      border-bottom: 1px solid;
-      outline: none;
-      font-size: 14px;
+  button {
+    padding: 10px;
+    background-color: #fff;
+    border: none;
+    border-bottom: none;
+    font-weight: normal;
+    cursor: pointer;
+
+    &.active {
+      background-color: #ddd;
+      border-bottom: 2px solid black;
+      font-weight: bold;
     }
   }
+}
+
+.register_container {
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
+  border-radius: 10px;
+  padding: 50px;
+  height: 80vh;
+
+  .leftSection {
+    flex: 1;
+  }
+
+  .rightSection {
+    flex: 1;
+  }
+}
+
+.inputGroup {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-bottom: 8%;
+
+  i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  input,
+  select {
+    width: 80%;
+    height: 30px;
+    padding: 5px 5px 5px 30px;
+    border: none;
+    border-bottom: 1px solid;
+    outline: none;
+    font-size: 14px;
+  }
+}
+
+.register_id {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8%;
+}
+
+.register_date {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8%;
+}
+
+.user_count {
+  display: flex;
+  justify-content: space-between;
+  // background-color: red;
+}
+
+.register_btn {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+
+  button {
+    border-radius: 0.5rem;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+
+    &:first-child {
+      background-color: #ccc;
+    }
+
+    &:last-child {
+      background-color: black;
+      color: #fff;
+    }
+  }
+}
+
+.payment_container {
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
+  border-radius: 10px;
+  padding: 50px;
+  height: 80vh;
+
+  .left_section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .info {
+      display: flex;
+      gap: 10px;
+
+      label {
+        font-weight: bold;
+        color: #333;
+        flex-shrink: 0;
+        width: 100px;
+      }
+
+      span {
+        color: #555;
+      }
+
+      .highlight {
+        color: #007bff;
+        font-weight: bold;
+      }
+
+      &.plan {
+        align-items: flex-start;
+
+        i {
+          margin-left: 10px;
+          cursor: pointer;
+          color: #007bff;
+        }
+
+        p {
+          margin-top: 5px;
+          font-size: 14px;
+          color: #777;
+        }
+      }
+    }
+  }
+
+  .right_section {
+    flex: 1;
+    table {
+      width: 100%;
+      border-collapse: collapse;
+
+      th,
+      td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+
+      th {
+        font-weight: bold;
+        background-color: #f9f9f9;
+      }
+
+      a {
+        color: #007bff;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
