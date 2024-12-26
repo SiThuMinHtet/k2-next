@@ -1,9 +1,28 @@
-import { useState } from "react";
+import { useState  , useEffect} from "react";
 import styles from "@/styles/Sidebar.module.scss";
 import Link from "next/link";
-export default function SideBar({ isCollapsed }) {
+export default function SideBar({ isCollapsed , setIsSidebarCollapsed}) {
   const [activeSubMenu, setActiveSubMenu] = useState(null);
   const [hoveredItem, setHoveredItem] = useState(null);
+
+
+
+  const handleResize = () => {
+    if (window.innerWidth <= 630) {
+      setIsSidebarCollapsed(true);
+    } else {
+      setIsSidebarCollapsed(false);
+    }
+  };
+
+
+  useEffect(() => {
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const toggleSubMenu = (menu) => {
     if (!isCollapsed) {

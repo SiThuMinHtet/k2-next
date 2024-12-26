@@ -1,38 +1,82 @@
+@import 'variables';
+
+
 .tab_btn {
   display: flex;
   justify-content: center;
+  margin-top: 2rem;
+
 
   button {
     padding: 10px;
-    background-color: #fff;
+    background-color: #ddd;
     border: none;
     border-bottom: none;
     font-weight: normal;
     cursor: pointer;
+    border-radius: 5px 5px 2px 1px;
 
     &.active {
-      background-color: #ddd;
+     
+      background-color: #fff;
       border-bottom: 2px solid black;
       font-weight: bold;
     }
   }
 }
+.register_main
+{
+  height: 100vh;
+  position: relative;
 
+  h2
+  {
+    position: absolute;
+    top:-3%;
+    left: 10%;
+  }
+  
+}
+
+.register_wrapper
+{
+  height: 80vh;
+  // padding : 10px 0px 100px 0px;
+  background-color: white;
+  border-radius: $border-radius
+}
 .register_container {
   display: flex;
   justify-content: space-between;
   gap: 5rem;
   border-radius: 10px;
   padding: 50px;
-  height: 80vh;
+  height: auto;
+  
 
   .leftSection {
+
     flex: 1;
+
+
+    label
+    {
+      font-size: large;
+      font-weight: bold;
+    }
   }
 
   .rightSection {
     flex: 1;
+
+    label
+    {
+      font-size: large;
+      font-weight: bold;
+    }
   }
+
+ 
 }
 
 .inputGroup {
@@ -83,12 +127,18 @@
   display: flex;
   gap: 10px;
   justify-content: center;
+  position: relative;
+  
+
 
   button {
     border-radius: 0.5rem;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
+    position: absolute;
+    top: 30;
+ 
 
     &:first-child {
       background-color: #ccc;
@@ -107,23 +157,25 @@
   gap: 5rem;
   border-radius: 10px;
   padding: 50px;
-  height: 80vh;
+  height: 70vh;
 
   .left_section {
     flex: 1;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    padding: 3.5rem;
 
     .info {
       display: flex;
-      gap: 10px;
+      gap: 15rem;
 
       label {
         font-weight: bold;
         color: #333;
         flex-shrink: 0;
         width: 100px;
+        font-size:large;
       }
 
       span {
@@ -135,8 +187,8 @@
         font-weight: bold;
       }
 
-      &.plan {
-        align-items: flex-start;
+      &__plan {
+        // display: flex;
 
         i {
           margin-left: 10px;
@@ -154,8 +206,19 @@
   }
 
   .right_section {
+    padding: 3.5rem;
+    background-color: #f5f6fa;
     flex: 1;
+    border-radius: $border-radius;
+    position: relative;
+
+    h2{
+      position:absolute;
+      top: 0.5%;
+      border-bottom: 3px solid black;
+    }
     table {
+      margin-top:2rem;
       width: 100%;
       border-collapse: collapse;
 
@@ -181,4 +244,39 @@
       }
     }
   }
+}
+
+
+.form_actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 3.5rem;
+  position: absolute;
+  left:35%;
+  bottom: 15%;
+  padding: 0px 150px;
+}
+
+.button_cancel
+{
+  @include button;
+  background-color: $button-reset;
+  color: $input-bg;
+}
+
+.button_register
+{
+  @include button;
+  background-color: $button-search;
+  color: $input-bg;
+}
+
+.box{
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(0deg, $primary-color 0%, $secondary-color 100%);
+  position: absolute;
+  z-index: 1;
+  margin-top: -10px;
+  margin-left: 40px;
 }

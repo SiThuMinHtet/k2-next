@@ -1,4 +1,4 @@
-$primary-color: #0d1b2a;
+$primary-color: #012232;
 $secondary-color: #1b263b;
 $active-color: #0066cc;
 $text-color: #f5f6fa;
@@ -19,16 +19,17 @@ $floating-menu-border: #e0e0e0;
   color: $text-color;
   min-width: 200px;
   height: auto;
-  padding: 1rem;
-  transition: width 0.3s ease;
+  // padding: 1rem;
+  transition: width 0.9s ease;
   position: relative;
   z-index: 1000;
-  @include mobile {
-   font-size: small;
-   max-width: 200px;
-  //  margin-right: 20px;
-  }
+  // @include mobile {
+  //  font-size: small;
+  //  max-width: 200px;
+  // //  margin-right: 20px;
+  // }
   
+
 
   &.collapsed {
     min-width: 60px;
@@ -51,6 +52,13 @@ $floating-menu-border: #e0e0e0;
       .navlist__link {
         justify-content: center;
         padding: 0.5rem;
+        // margin-left: -5px;
+        width: 60px;
+
+        i
+        {
+          padding-right: 10px;
+        }
 
         span, .chevron {
           display: none;
@@ -65,7 +73,8 @@ $floating-menu-border: #e0e0e0;
     justify-content: center;
     gap: 1rem;
     text-align: center;
-    left: 2%;
+    left: 2.5%;
+    top: 2.5%;
     // margin-bottom: 2rem;
 
     i {
@@ -87,15 +96,17 @@ $floating-menu-border: #e0e0e0;
 
   &__nav {
     position: fixed;
+  // width: 200px;
     top: 10%;
     .navlist {
+     
       list-style: none;
       padding: 0;
       margin: 0;
 
       &__item {
         margin-bottom: 1rem;
-        margin-left: 1.5rem;
+        // margin-left: 0.5rem;
         position: relative;
         @include mobile {
           margin-left: 0px;
@@ -114,15 +125,20 @@ $floating-menu-border: #e0e0e0;
           color: $text-color;
           text-decoration: none;
           font-size: 0.95rem;
-          padding: 0.5rem;
+          padding: 1rem;
           cursor: pointer;
+          // margin-left: 5px;
+          width: 200px;
 
           i {
+            margin-left: 1.5rem;
             font-size: 1rem;
           }
 
           &:hover {
-            color: $active-color;
+            // color: $active-color;
+            // color: red;
+            background-color:#00324D
           }
         }
 
@@ -173,10 +189,16 @@ $floating-menu-border: #e0e0e0;
           &__item {
             margin-top: 1rem;
             margin-bottom: 0.5rem;
+            width: 100%;
 
             a {
               color: white;
               text-decoration: none;
+
+              &:hover {
+                background-color: #00324D;
+               
+              }
             }
 
             &__link {
@@ -185,7 +207,7 @@ $floating-menu-border: #e0e0e0;
               font-size: 0.9rem;
 
               &:hover {
-                color: $active-color;
+                background-color: #00324D;
                
               }
             }

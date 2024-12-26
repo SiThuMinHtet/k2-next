@@ -13,7 +13,7 @@ export default function Home() {
 
   return (
     <div className="dashboard">
-      <SideBar isCollapsed={isSidebarCollapsed} />
+      <SideBar isCollapsed={isSidebarCollapsed} setIsSidebarCollapsed={setIsSidebarCollapsed} />
       <main>
         <Navbar onToggleSidebar={toggleSidebar} />
         <div className='content'>

@@ -1,8 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState  , useRef} from 'react';
 import Head from 'next/head';
 import TableLayout from '../components/TableLayout';
-
+import Modal from '../components/Modal'
+import SearchForm from '../components/SearchForm'
 const CompanyList = () => {
+  const mainContentRef = useRef(null);
+
+  const [isSearchModalOpen , setIsSearchModalOpen] = useState(false);
   const [tableData, setTableData] = useState([
     {
       registerDate: '2020-10-14',
@@ -30,7 +34,14 @@ const CompanyList = () => {
 
   const handleSearch = () => {
     console.log('Search clicked');
+    setIsSearchModalOpen(true);
+   
   };
+
+  const handleCloseModal = () =>
+  {
+    setIsSearchModalOpen(false);
+  }
 
   const handlePrint = () => {
     console.log('Print clicked');
@@ -48,6 +59,7 @@ const CompanyList = () => {
         onSearch={handleSearch}
         onPrint={handlePrint}
         onAdd={handleAdd}
+        formType ={"company"}
       >
         <table className="data-table">
           <thead>
@@ -110,6 +122,10 @@ const CompanyList = () => {
           </tbody>
         </table>
       </TableLayout>
+
+
+
+    
     </>
   );
 };

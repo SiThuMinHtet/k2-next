@@ -25,7 +25,7 @@ $transition-duration: 0.2s;
 
 .table-wrapper {
   padding: 1rem;
-  height: 100%;
+  height: 100vh;
   background-color: white;
   margin: 1rem;
   border-radius: $border-radius;
@@ -39,12 +39,19 @@ $transition-duration: 0.2s;
   margin-bottom: 1rem;
   gap: 1rem;
 
+  &__left
+  {
+    margin-left: 6rem;
+  }
+
+
   &__left,
   &__right {
     display: flex;
     gap: 1rem;
     align-items: center;
     flex-wrap: wrap;
+    // position: relative;
   }
 
   .total,
@@ -121,7 +128,12 @@ $transition-duration: 0.2s;
 
   .group-row {
     display: none;
-    background-color: #f8f9fa;
+   
+
+    tr:hover
+    {
+      background-color: #D2EAF4;
+    }
 
     &.visible {
       display: table-row;
@@ -189,18 +201,26 @@ $transition-duration: 0.2s;
   }
   .group-row {
     display: none;
-    background-color: #f8f9fa !important;
+    // background-color: #f8f9fa !important;
+    // background-color: #cdf3ff;
     // background-color: #006aeb !important;
+
 
     &.visible {
       display: table-row;
+      
     }
 
     td {
       // padding: 0;
       // background-color: #e2e8f0;
-      background-color: #d1dff0;
+      // background-color: #d1dff0;
+      background-color: #d9f6ff;
+
+      
     }
+
+
 
     .group-user {
       padding: 0.75rem 1rem;
@@ -241,7 +261,7 @@ $transition-duration: 0.2s;
 }
 
 thead {
-  background-color: $table-header-bg;
+  background-color: rgb(217, 217, 217);
 
   th {
     position: sticky;
@@ -257,7 +277,11 @@ thead {
 }
 
 tbody {
+
+  
+
   tr {
+    
     td[data-label="User ID/Name"] {
       .cell-content {
         div:first-child {

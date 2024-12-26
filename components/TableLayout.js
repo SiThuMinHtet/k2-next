@@ -1,16 +1,32 @@
 import React from "react";
 import { useRouter } from "next/router";
+import {useState} from 'react'
+import Modal from "../components/Modal"
+import SearchForm from "../components/SearchForm"
+import BlueBox from "../components/BlueBox"
+const TableLayout = ({ children, title, total, onSearch, onPrint  , formType}) => {
 
-const TableLayout = ({ children, title, total, onSearch, onPrint }) => {
+  const [isOpenModal , setIsOpenModal] = useState(false)
+
+  function openModal () {
+    setIsOpenModal(true)
+  }
+
+  function closeModal () {
+    setIsOpenModal(false)
+  }
   const router = useRouter();
   const handleAddButtonClick = () => {
     router.push("/dashboard/company/companylist/companyRegister"); // Navigate to the specified route
   };
 
+
   return (
     <div className="table-wrapper">
       <div className="table-header">
         <div className="table-header__left">
+
+          <BlueBox/>
           <h2>{title}</h2>
           <div className="total">
             <h4>Total : </h4>
@@ -29,7 +45,7 @@ const TableLayout = ({ children, title, total, onSearch, onPrint }) => {
         <div className="table-header__right">
           <div className="input-field search">
             <input placeholder="Search..." />
-            <button onClick={onSearch}>
+            <button onClick={openModal}>
               <i className="fas fa-search"></i>
             </button>
           </div>
@@ -44,7 +60,18 @@ const TableLayout = ({ children, title, total, onSearch, onPrint }) => {
           </button>
         </div>
       </div>
-      <div className="table-container">{children}</div>
+      <div className="table-container">
+        {children}
+      </div>
+
+
+      {isOpenModal && 
+  <Modal isOpen={isOpenModal} onClose = {closeModal}>
+         {formType =="company" && <SearchForm formType ={"company"}/>}
+         {formType =="user" && <SearchForm formType ={"user"}/>}
+         {formType =="access" && <SearchForm formType ={"access"}/>}
+  </Modal>
+}
     </div>
   );
 };
