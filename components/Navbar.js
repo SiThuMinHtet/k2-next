@@ -73,34 +73,58 @@ export default function Navbar({ onToggleSidebar }) {
             <div className={styles.dropdown}>
               <ul className={styles.dropdown__list}>
                 <li>
-                  <span>2020-10-01 10:15</span>
-                  <strong>Admin</strong>
-                  <p>Create Admin - Htet Khaing</p>
+                  <div>
+                    <p>2020-10-01 10:15</p>
+                    <strong>Admin</strong>
+                  </div>
+                  <div>
+                    <span>Create Admin</span>
+                    <p>Htet Khaing</p>
+                  </div>
                 </li>
                 <li>
-                  <span>2020-10-01 10:15</span>
-                  <strong>Admin</strong>
-                  <p>Delete Admin - BBBBB</p>
+                  <div>
+                    <p>2020-10-01 10:15</p>
+                    <strong>Admin</strong>
+                  </div>
+                  <div>
+                    <span>Delete Admin</span>
+                    <p>BBBB</p>
+                  </div>
                 </li>
                 <li>
-                  <span>2020-10-01 10:15</span>
-                  <strong>Lwi Htet</strong>
-                  <p>Add Company - Lwin Htet Co.ltd</p>
+                  <div>
+                    <p>2020-10-01 10:15</p>
+                    <strong>Lwin Htet</strong>
+                  </div>
+                  <div>
+                    <span>Add Company</span>
+                    <p>Lwin Htet Co.Ltd</p>
+                  </div>
                 </li>
                 <li>
-                  <span>2020-10-01 10:15</span>
-                  <strong>Ei Ei</strong>
-                  <p>Disable Login - CCCC</p>
+                  <div>
+                    <p>2020-10-01 10:15</p>
+                    <strong>Ei Ei</strong>
+                  </div>
+                  <div>
+                    <span>Disable Login</span>
+                    <p>CCCCC</p>
+                  </div>
                 </li>
                 <li>
-                  <span>2020-10-01 10:15</span>
-                  <strong>Ei Ei</strong>
-                  <p className={styles.login}>Log-in</p>
+                  <div>
+                    <span>2020-10-01 10:15</span>
+                    <strong>Ei Ei</strong>
+                  </div>
+                  <button className={styles.login}>Log-in</button>
                 </li>
                 <li>
-                  <span>2020-10-01 10:15</span>
-                  <strong>Mya Mya</strong>
-                  <p className={styles.logout}>Log-out</p>
+                  <div>
+                    <span>2020-10-01 10:15</span>
+                    <strong>Mya Mya</strong>
+                  </div>
+                  <button className={styles.logout}>Log-out</button>
                 </li>
               </ul>
               <a href="#" className={styles.viewAll}>
