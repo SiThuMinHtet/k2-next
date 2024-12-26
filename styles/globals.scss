@@ -40,20 +40,17 @@ main {
 
 /* Media query for big screens */
 
-
 @media (max-width: 620px) {
-
   main {
     width: 80%;
-  
-   
   }
-
 }
 @media (min-width: 1023px) {
-
   main .content {
     height: auto;
   }
+}
 
+a {
+  text-decoration: none;
 }
