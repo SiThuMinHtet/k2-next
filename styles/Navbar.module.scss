@@ -132,7 +132,8 @@
 
   .dropdown {
     position: absolute;
-    top: 100%;
+    // top: 100%;
+    top: 50px;
     right: 0;
     background-color: #333;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -215,7 +216,7 @@
 
   .dropdown {
     position: absolute;
-    top: 100%; // Position dropdown below the profile section
+    top: 55px;
     right: 0; // Align dropdown to the right edge of the profile section
     background-color: #333;
     border-radius: 4px;
@@ -267,7 +268,7 @@
 
   .dropdown {
     position: absolute;
-    top: 100%; // Position dropdown below the icon
+    top: 50px;
     right: 0; // Align dropdown to the right edge
     background-color: #333; // Dark background similar to screenshot
     border-radius: 4px;

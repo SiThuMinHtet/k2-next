@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import styles from "@/styles/Navbar.module.scss";
+import Image from "next/image";
 
 export default function Navbar({ onToggleSidebar }) {
   const [isNotificationDropdownVisible, setIsNotificationDropdownVisible] =
@@ -171,10 +172,13 @@ export default function Navbar({ onToggleSidebar }) {
               <p>Admin</p>
             </div>
           </a>
-          <img
-            src="img/user_avatar.png"
+          <Image
+            src="/images/user_avatar.png" // Path relative to the `public` directory
             alt="Admin Avatar"
-            className={styles.profile__avatar}
+            className={styles.profile__avatar} // Optional CSS class
+            width={100}
+            height={100}
+            priority
           />
           {isProfileDropdownVisible && (
             <div className={styles.dropdown}>
