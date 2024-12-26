@@ -9,6 +9,39 @@ $border-radius : 5px;
 // Typography
 $font-family: "Roboto", serif;
 
+
+
+$border-color: #e5e7eb;
+$input-bg: #ffffff;
+$button-reset: #6b7280;
+$button-search: #1a2233;
+$modal-bg: rgba(0, 0, 0, 0.5);
+$transition-duration: 0.3s;
+$border-radius: 0.5rem;
+
+@mixin input-reset {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+  outline: none;
+}
+
+@mixin button{
+  flex: 1;
+  padding: 0.75rem;
+  border: none;
+  border-radius: $border-radius;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity $transition-duration;
+
+}
 .--orange {
   background: rgb(255, 164, 0);
   background: linear-gradient(

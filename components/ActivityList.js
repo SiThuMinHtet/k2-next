@@ -48,6 +48,7 @@ const ActivityTable = () => {
     onSearch={handleSearch}
     onPrint={handlePrint}
     onAdd={handleAdd}
+    formType ={"access"}
   >
     <table className="data-table">
       <thead>

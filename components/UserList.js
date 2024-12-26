@@ -50,6 +50,7 @@ const UserTable = () => {
       onSearch={() => console.log('Search clicked')}
       onPrint={() => console.log('Print clicked')}
       onAdd={() => console.log('Add clicked')}
+      formType ={"company"}
     >
       <table className="data-table">
         <thead>

@@ -1,0 +1,74 @@
+@import 'variables';
+
+.search_form
+{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+
+.form_group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  margin-bottom : 10px;
+
+  label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    // color: $text-color;
+  }
+
+  input,
+  select {
+    @include input-reset;
+    border-bottom: 1px solid $border-color;
+    padding: 0.5rem 0;
+    transition: border-color $transition-duration;
+
+    &:focus {
+      border-color: black;
+    }
+  }
+}
+
+.form_actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  // padding: 50px;
+}
+
+
+// .button {
+  
+//   &:hover {
+//     opacity: 0.9;
+//   }
+
+//   &_reset {
+//     background-color: $button-reset;
+//     color: $input-bg;
+//   }
+
+//   &_search {
+//     background-color: $button-search;
+//     color: $input-bg;
+//   }
+// }
+
+.button_reset
+{
+  @include button;
+  background-color: $button-reset;
+  color: $input-bg;
+}
+
+.button_search
+{
+  @include button;
+  background-color: $button-search;
+  color: $input-bg;
+}
+

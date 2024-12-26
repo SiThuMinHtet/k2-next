@@ -4,6 +4,7 @@ import Chart from 'chart.js/auto';
 import styles from '../styles/Dashboard.module.scss';
 
 
+
 export default function Dashboard() {
   const chartRefs = useRef({});
 
