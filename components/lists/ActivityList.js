@@ -1,5 +1,5 @@
 import React from 'react';
-import TableLayout from '../components/TableLayout';
+import TableLayout from '../layouts/TableLayout';
 const ActivityTable = () => {
   const tableData = [
     {

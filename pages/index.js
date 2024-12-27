@@ -1,7 +1,7 @@
-import MainLayout from "@/components/MainLayout";
-import LoginForm from "@/components/LoginForm";
+import MainLayout from "@/components/layouts/MainLayout";
+import LoginForm from "@/components/forms/LoginForm";
 // import { LoginProvider } from "@/contexts/LoginContext.js";
-import styles from "@/styles/Home.module.scss";
+import styles from "@/components/layouts/Home.module.scss";
 
 export default function Home() {
   return (

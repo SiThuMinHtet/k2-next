@@ -1,7 +1,7 @@
 import { useState } from "react";
-import SideBar from "@/components/SideBar";
-import Navbar from "@/components/Navbar";
-import CompanyRegister from "@/components/CompanyRegister";
+import SideBar from "@/components/ui/SideBar";
+import Navbar from "@/components/ui/Navbar";
+import CompanyRegister from "@/components/forms/CompanyRegister";
 
 export default function Home() {
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);

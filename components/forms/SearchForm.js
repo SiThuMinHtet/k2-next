@@ -137,7 +137,7 @@
 // export default SearchForm;
 
 import React, { useState } from 'react';
-import formStyles from '../styles/SearchForm.module.scss';
+import formStyles from './SearchForm.module.scss';
 
 const FORM_CONFIGS = {
   company: {

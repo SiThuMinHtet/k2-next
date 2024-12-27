@@ -1,8 +1,8 @@
 import React, { useState  , useRef} from 'react';
 import Head from 'next/head';
-import TableLayout from '../components/TableLayout';
-import Modal from '../components/Modal'
-import SearchForm from '../components/SearchForm'
+import TableLayout from '../layouts/TableLayout';
+import Modal from '../ui/Modal'
+import SearchForm from '../forms/SearchForm'
 const CompanyList = () => {
   const mainContentRef = useRef(null);
 

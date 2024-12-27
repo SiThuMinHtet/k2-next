@@ -1,7 +1,7 @@
 import { useState } from "react";
-import SideBar from "@/components/SideBar";
-import Navbar from "@/components/Navbar";
-import ActivityTable from "@/components/ActivityList";
+import SideBar from "@/components/ui/SideBar";
+import Navbar from "@/components/ui/Navbar";
+import ActivityTable from "@/components/lists/ActivityList";
 
 export default function Home() {
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);

@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import styles from "@/styles/Navbar.module.scss";
+import styles from "./Navbar.module.scss";
 import Image from "next/image";
 
 export default function Navbar({ onToggleSidebar }) {

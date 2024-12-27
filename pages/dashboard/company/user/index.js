@@ -1,8 +1,8 @@
 
 import { useState } from 'react';
-import SideBar from "@/components/SideBar";
-import Navbar from "@/components/Navbar";
-import UserList from "@/components/UserList";
+import SideBar from "@/components/ui/SideBar";
+import Navbar from "@/components/ui/Navbar";
+import UserList from "@/components/lists/UserList";
 
 export default function Home() {
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import TableLayout from './TableLayout';
+import TableLayout from "../layouts/TableLayout";
 
 const UserTable = () => {
   const [tableData, setTableData] = useState([

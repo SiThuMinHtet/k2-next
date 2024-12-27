@@ -1,5 +1,5 @@
 // import '../css/FormModal.css'
-import styles from '../styles/Modal.module.scss'
+import styles from './Modal.module.scss'
 const Modal = ({ isOpen, onClose, children }) => {
   if (!isOpen) return null
 

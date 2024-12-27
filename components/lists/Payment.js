@@ -1,5 +1,5 @@
 import React from "react";
-import TableLayout from "./TableLayout";
+import TableLayout from "../layouts/TableLayout";
 
 const PaymentList = () => {
   const tableData = [

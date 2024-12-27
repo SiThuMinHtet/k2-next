@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import Head from 'next/head';
 import Chart from 'chart.js/auto';
-import styles from '../styles/Dashboard.module.scss';
+import styles from './Dashboard.module.scss';
 
 
 

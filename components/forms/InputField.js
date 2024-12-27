@@ -1,4 +1,4 @@
-import styles from '@/styles/InputField.module.scss'
+import styles from './InputField.module.scss'
 
 export default function InputField({ type, name, placeholder, icon }) {
   return (

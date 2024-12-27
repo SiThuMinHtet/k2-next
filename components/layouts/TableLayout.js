@@ -1,9 +1,9 @@
 import React from "react";
 import { useRouter } from "next/router";
 import {useState} from 'react'
-import Modal from "../components/Modal"
-import SearchForm from "../components/SearchForm"
-import BlueBox from "../components/BlueBox"
+import Modal from "../ui/Modal"
+import SearchForm from "../forms/SearchForm"
+import BlueBox from "../ui/BlueBox"
 const TableLayout = ({ children, title, total, onSearch, onPrint  , formType}) => {
 
   const [isOpenModal , setIsOpenModal] = useState(false)

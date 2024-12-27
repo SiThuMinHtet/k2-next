@@ -1,5 +1,5 @@
 import { useState  , useEffect} from "react";
-import styles from "@/styles/Sidebar.module.scss";
+import styles from "./Sidebar.module.scss";
 import Link from "next/link";
 export default function SideBar({ isCollapsed , setIsSidebarCollapsed}) {
   const [activeSubMenu, setActiveSubMenu] = useState(null);

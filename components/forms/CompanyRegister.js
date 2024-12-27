@@ -196,9 +196,9 @@
 
 
 import React, { useState } from "react";
-import styles from "../styles/InputField.module.scss";
-import BtnStyles from "../styles/SearchForm.module.scss";
-import BlueBox from "../components/BlueBox"
+import styles from "./InputField.module.scss";
+import BtnStyles from "./SearchForm.module.scss";
+import BlueBox from "../ui/BlueBox"
 const CompanyRegister = () => {
   const [activeTab, setActiveTab] = useState("register");
 
